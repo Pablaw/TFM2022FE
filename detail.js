@@ -12,8 +12,6 @@ const playerFeature = document.querySelector(".playerFeature_article");
 const playerStat = document.querySelector(".playerStat_article");
 
 
-
-
 /* GET 팀호출 */
 function pageLoad (e) {
 fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
@@ -27,7 +25,7 @@ fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
             for(let i=0; i < arr.length; i++ ) {
                 const values = Object.values(arr[i])[1];
                 const valuesMod = values.replace('(', '\n(');
-                const teamNameBtn = document.createElement("button");
+                const teamNameBtn = document.createElement("div");
                 teamNameBtn.classList.add("teamNameBtn_button");
                 teamNameBtn.classList.add(`${result[i].trophy}`);
                 teamNameBtn.innerText = valuesMod;
@@ -38,6 +36,7 @@ fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
         teamListCreate ();
 
     }).then(()=> {
+
         const teamNameBtn = document.querySelectorAll(".teamNameBtn_button");
         const numbsOfBtn = teamNameBtn.length;
 

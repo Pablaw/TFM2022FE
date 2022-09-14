@@ -10,21 +10,63 @@ body {
 
 .header {
     display: grid;
-    grid-template-columns: repeat(3, 429px);
+    grid-template-columns: repeat(4, 321.75px);
     grid-template-rows: repeat(1, auto);
-    justify-content: center;
+    grid-template-areas: "logoBtn . selModeBtn logoutBtn";
     margin-bottom: 8px;
 }
 
+.logoBtn {
+    grid-area: logoBtn;
+}
+
+.selModeBtnName{
+    grid-area: selModeBtn;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    width: 70px;
+    height: 25px;
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 10px;
+    background-color: rgb(229, 229, 229);
+    padding-top: 5px;
+    margin: 5px 72%;
+    opacity: 80%;
+}
+
+.modeSelBtnBG {
+    grid-area: selModeBtn;
+    width: 50px;
+    height: 25px;
+    border-style: solid;
+    border: 5px solid rgb(0, 48, 7);
+    border-radius: 20px;
+    margin: 5px 100%;
+    background-color: #EEEEEE;
+    opacity: 85%;
+}
+
+.modeSelBtn {
+    width: 18px;
+    height: 18px;
+    background-color: #359535;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .logoutBtn{
+    grid-area: logoutBtn;
+    width: 60px;
+    height: 25px;
     color: white;
     border-style: solid;
     border-color: #256634;
     border-radius: 10px;
     background-color: #256634;
     padding: 5px 5px;
-    margin-left: 365px;
-    margin-top: 10px;
+    margin: 5px 75%;
     cursor: pointer;
 }
 
@@ -53,7 +95,7 @@ body {
     text-align: center;
     margin: 0;
     line-height: 50px;
-    color: white;
+    color: rgb(235, 235, 235);
     border-color: #256634;
     border-radius: 10px;
     background-color: #256634;
@@ -103,9 +145,8 @@ body {
 .teamNameBtn_button {
     display: block;
     font-size: 24px;
+    text-align: center;
     margin: 15px auto;
-    background-color: transparent;
-    text-decoration: none;
     border: none;
     cursor: pointer;
     border-color: #256634;

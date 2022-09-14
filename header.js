@@ -1,6 +1,7 @@
-
+const body = document.querySelector("body");
 const header = document.querySelector(".header");
 
+const content= document.querySelector(".content");
 
 function addHeaderSection () {
 const headerLogoArticle = document.createElement("article");
@@ -15,17 +16,52 @@ const logoBtn = document.createElement("img");
     }
 const headerMarginArticle = document.createElement("article");
     headerMarginArticle.classList.add("headerMargin");
-const headerLogOutArticle = document.createElement("article");
-    headerLogOutArticle.setAttribute("class", "headerLogOutArticle");
-const logoutBtn = document.createElement("button");
+
+const logoutBtn = document.createElement("div");
     logoutBtn.classList.add("logoutBtn");
     logoutBtn.innerText = "로그아웃";
+
+    function selDayNightMode (e) {
+        console.log(selModeBtnName);
+        if(modeSelBtn.style.marginLeft === "") {
+            modeSelBtn.style.marginLeft = "55%";
+            selModeBtnName.innerHTML = "야간모드";
+            selModeBtnName.style.color = "rgb(235,235,235)";
+            content.style.color = "rgb(235,235,235)";
+            body.style.backgroundColor = "#191919";
+            selModeBtnName.style.backgroundColor = "black";
+        } else {
+            modeSelBtn.style.marginLeft = "";
+            selModeBtnName.innerHTML = "주간모드";
+            selModeBtnName.style.color = "black";
+            content.style.color = "black";
+            body.style.backgroundColor = "white";
+            selModeBtnName.style.backgroundColor = "#EEEEEE";
+        }
+        
+    }
+    
+
+
+const modeSelBtnBG = document.createElement("div");
+modeSelBtnBG.classList.add("modeSelBtnBG");
+
+const modeSelBtn = document.createElement("div");
+modeSelBtn.classList.add("modeSelBtn");
+modeSelBtn.addEventListener("click", selDayNightMode);
+
+const selModeBtnName = document.createElement("div");
+selModeBtnName.classList.add("selModeBtnName");
+selModeBtnName.innerHTML = "주간모드";
+
+modeSelBtnBG.appendChild(modeSelBtn);
 
     headerLogoArticle.appendChild(logoBtn);
     header.appendChild(headerLogoArticle);
     header.appendChild(headerMarginArticle);
-    headerLogOutArticle.appendChild(logoutBtn);
-    header.appendChild(headerLogOutArticle);
+    header.appendChild(selModeBtnName);
+    header.appendChild(modeSelBtnBG);
+    header.appendChild(logoutBtn);
 }
 
 document.addEventListener("DOMContentLoaded", addHeaderSection);
