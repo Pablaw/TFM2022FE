@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - TFM 2022</title>
+    <link rel="stylesheet" href="styleSignup.css" />
+    <script defer src="signup.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class=""></div>
+      <a href="login.html">
+        <img class="tfmImg" src="./img/tfm2022.png" />
+      </a>
+      <div class=""></div>
+    </div>
+    <div class="border">
+      <div class="content">
+        <label class="inputLabel" for="inputId">아이디</label>
+        <input
+          class="inputTxt"
+          id="inputId"
+          type="text"
+          maxlength="10"
+          placeholder="10자 이내"
+        />
+        <div class=""></div>
+        <label class="inputLabel" for="inputPw">비밀번호</label>
+        <input
+          class="inputTxt"
+          id="inputPw"
+          type="password"
+          maxlength="30"
+          placeholder="30자 이내"
+        />
+        <div class=""></div>
+        <label class="inputLabel" for="inputPwCheck">비밀번호 확인</label>
+        <input
+          class="inputTxt"
+          id="inputPwCheck"
+          type="password"
+          maxlength="30"
+          placeholder="30자 이내"
+        />
+        <div id="validCheckPw">일치확인</div>
+        <label class="inputLabel" for="nick">닉네임</label>
+        <input
+          class="inputTxt"
+          id="nick"
+          type="text"
+          maxlength="10"
+          placeholder="10자 이내"
+        />
+        <div class="inputTxt" =""></div>
+        <label class="inputLabel" for="uname">이름</label>
+        <input class="inputTxt" id="uname" type="text" placeholder="" />
+        <div class="inputTxt" =""></div>
+        <label class="inputLabel" for="tamid">인재번호</label>
+        <input class="inputTxt" id="tamid" type="number" placeholder="" />
+        <div class="inputTxt" =""></div>
+        <label class="inputLabel" for="gisu">기수</label>
+        <input class="inputTxt" id="gisu" type="number" placeholder="" />
+        <div class="inputTxt" =""></div>
+        <label class="inputLabel" for="mail">이메일</label>
+        <input class="inputTxt" id="mail" type="text" placeholder="" />
+        <div class="inputTxt" id="mailValidTxt"></div>
+        <div class=""></div>
+        <button id="signUpBtn">회원가입</button>
+        <div class=""></div>
+      </div>
+    </div>
+    <div class="find_idPw">
+      <a href="findIdPw.html" id="findId">아이디/비밀번호 찾기</a>
+    </div>
+    <hr class="divisionLine" />
+    <section class="footer">
+      <article class="footerLogo">
+        <input
+          class="ohleekimLogo"
+          type="image"
+          alt="ohleekimLogoImage"
+          src="img/ohleekim.png"
+        />
+      </article>
+      <article class="footerCopyRight">
+        <p class="ohleekimCopyRightText">© 오이김. All Rights Reserved.</p>
+      </article>
+      <article class="footerMargin"></article>
+    </section>
+  </body>
+</html>

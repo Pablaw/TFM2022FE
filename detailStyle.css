@@ -1,0 +1,410 @@
+body {
+    background-color: bisque;
+}
+
+.pageSize {
+    width: 1280px;
+    margin: 0 320px;
+    height: 1080px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 429px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.logoutBtn{
+    color: white;
+    border-style: solid;
+    border-color: #256634;
+    border-radius: 10px;
+    background-color: #256634;
+    padding: 5px 5px;
+    margin-left: 365px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.divisionLine {
+    height: 1px;
+    border: 0;
+    background-color:#EEEEEE;
+    width: 1287px;
+}
+
+.tno {
+    visibility: hidden;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 640px;
+    justify-content: left;
+
+}
+
+.teamListTitle_div_tname {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    line-height: 50px;
+    color: white;
+    border-color: #256634;
+    border-radius: 10px;
+    background-color: #256634;
+}
+
+.sortSection {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content:space-between;
+    margin: 10px 0;
+    padding: 0 30px;
+    color: gray;
+}
+
+.sortAlphabet {
+    cursor: pointer;
+}
+
+.sortTrophy {
+    cursor: pointer;
+}
+
+.teamList {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: 50px 480px;
+    justify-content: left;
+    align-items: flex-start;
+    height: 450px;
+}
+
+.teamNameList_ul {
+    overflow-y: scroll; 
+    width: 250px; 
+    height: 540px;
+    padding: 0;
+    margin: 0;
+    border: solid 2px #256634;
+    border-radius: 10px;
+}
+
+.teamTitle {
+    width: 250px;
+    height: 50px;
+}
+
+.teamNameBtn_button {
+    display: block;
+    font-size: 24px;
+    margin: 15px auto;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-color: #256634;
+    border-radius: 10px;
+    font-weight: bold;
+}
+/* 디테일 정보 표시 부분 */
+.hiddenContent {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    margin-left: 20px;
+}
+
+.teamInfoTop_section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(1, auto);
+    gap: 10px;
+}
+
+.teamInfo_article {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    /* grid-area: info; */
+    width: 250px;
+    margin: 0 auto;
+}
+/* 팀 인포요소 시작 */
+.teamName_div_tname {
+    width: 250px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.teamLogo_img_logo {
+    width: 250px;
+    object-fit: scale-down;
+    margin: 0 auto;
+}
+
+.history_div {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nickName_div_alias {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+/* 팀 인포요소 끝 */
+.temaStadium_article {
+    /* grid-area: stadium; */
+}
+
+.stadiumImg_img_Stadium {
+    width: 640px;
+    height: 365px;
+}
+
+.teamTrophy_article {
+    /* grid-area: trophy; */
+}
+
+.trophyImg_img_trophy {
+    text-align: center;
+    width: 110px;
+    height: 120px;
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 83px;
+    margin-top: 160px;
+}
+
+.teamInfoBottom_section {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(148px, auto));
+    grid-template-rows: repeat(1, 250px);
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.teamFormation_article {
+    display: grid;
+    grid-template-columns: repeat(4, 105px);
+    grid-template-rows: repeat(1, 250px);
+    justify-items: center;
+    align-items: center;
+}
+
+.postionGK {
+    display: grid;
+    /* grid-template-rows: repeat(3, 83px); */
+}
+
+.postionDF {
+    display: grid;
+    /* grid-template-rows: repeat(3, 83px); */
+}
+
+.postionMF {
+    display: grid;
+    /* grid-template-rows: repeat(3, 83px); */
+}
+
+.postionFW {
+    display: grid;
+    /* grid-template-rows: repeat(3, 83px); */
+}
+
+.teamLogo {
+    object-fit: cover;
+    height: 220px;
+}
+
+
+
+
+.footballFieldImg_img {
+    /* display: grid;
+    grid-template-columns: repeat(4, 104px);
+    grid-template-rows: repeat(3, 83px);
+    grid-template-areas: 
+    ". leftFDF leftFMF leftFW"
+    "GK centerDF centerMF centerFW"
+    ". rightFWDF rightFWMF rightFW"; */
+    justify-items: center;
+    align-items: center;
+    width: 416px;
+    height: 250px;
+}
+/* rgb(166, 56, 56); rgb(53, 149, 53); rgb(48, 48, 170); */
+
+.GK {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font: 700 24px sans-serif;
+    width: 50px;
+    height: 50px;
+    background-color: #FFCD4A;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.DF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font: 700 24px sans-serif;
+    width: 50px;
+    height: 50px;
+    background-color: #030aeb;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.MF {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font: 700 24px sans-serif;
+    width: 50px;
+    height: 50px;
+    background-color: #359535;
+    border: 3px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.FW {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+
+    font: 700 24px sans-serif;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(180, 6, 6);
+    border: 3px solid black;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.playerFeature_article {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+    align-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.playerName_div_pname {
+
+}
+
+.alias_div_feature {
+
+}
+
+.position_div_position {
+    width: 70px;
+    height: 38px;
+    padding-top: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: azure;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.playerStat_article {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(2, 120px);
+    grid-template-areas:
+    "att pas"
+    "def total";
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+.statAtt_div_att {
+    background-color: rgb(166, 56, 56);
+    border-radius: 10px;
+    color: azure;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 23px 0;
+}
+
+.statPas_div_pas {
+    background-color: rgb(53, 149, 53);
+    border-radius: 10px;
+    color: azure;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 23px 0;
+}
+
+.statDef_div_def {
+    background-color: rgb(48, 48, 170);
+    border-radius: 10px;
+    color: azure;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 23px 0;
+}
+
+.statTotal_div_total {
+    background-color: rgb(71, 69, 69);
+    border-radius: 10px;
+    color: azure;
+    font-size: 30px;
+    font-weight: 300;
+    padding: 23px 0;
+}
+
+
+
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.footerLogoImg {
+    grid-column: 1 / 2;
+    margin-left: 120px;
+}
+
+.footerCopyRightText {
+    grid-column: 2 / 3;
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #909090;
+}

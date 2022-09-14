@@ -1,0 +1,144 @@
+body {
+    background-color: bisque;
+}
+
+/* mainColor: #266634, #72B52C, #4D5B48 */
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 429px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.logoutBtn{
+    color: white;
+    border-style: solid;
+    border-color: #256634;
+    border-radius: 10px;
+    background-color: #256634;
+    padding: 5px 5px;
+    margin-left: 365px;
+    margin-top: 10px;
+}
+
+.divisionLine {
+    height: 0.1px;
+    border: 0;
+    background-color:#256634;
+    width: 1287px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 643.5px);
+    grid-template-rows: repeat(2, 290px);
+    grid-template-areas: 
+    "team my"
+    "team play";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.goToTeam {
+    grid-area: team;
+    /* width: 633.5px;
+    height: 570px;
+    background-color: #266634; */
+    border-radius: 10px;
+}
+
+.teamBtnImg {
+    display: block;
+    width: 633px;
+    height: 570px;
+    border-radius: 10px;
+    background: url(img/mainImg/teamHoverImgBefore.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.7s;
+}
+
+.teamBtnImg:hover {
+    border-radius: 10px;
+    background: url(img/mainImg/teamHoverImgAfter.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.goToMy {
+    grid-area: my;
+    /* width: 633.5px;
+    height: 280px;
+    background-color: #72B52C; */
+    border-radius: 10px;
+}
+
+.myBtnImg {
+    display: block;
+    width: 633px;
+    height: 285px;
+    border-radius: 10px;
+    background: url(img/mainImg/myHoverImgBefore.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.7s;
+}
+
+.myBtnImg:hover {
+    border-radius: 10px;
+    background: url(img/mainImg/myHoverImgAfter.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.goToPlay {
+    grid-area: play;
+    width: 633.5px;
+    height: 280px;
+    background-color: #4D5B48;
+    border-radius: 10px;
+}
+
+.playBtnImg {
+    display: block;
+    width: 633px;
+    height: 285px;
+    border-radius: 10px;
+    background: url(img/mainImg/playHoverImgBefore.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.7s;
+}
+
+.playBtnImg:hover {
+    border-radius: 10px;
+    background: url(img/mainImg/playHoverImgAfter.png) no-repeat;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.footerLogo {
+    grid-column: 1 / 2;
+    margin-left: 120px;
+}
+
+.footerCopyRight {
+    grid-column: 2 / 3;
+}
+
+.ohleekimCopyRightText {
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #909090;
+}

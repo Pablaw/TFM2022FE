@@ -1,0 +1,96 @@
+body {
+    background-color: bisque;
+}
+
+.divisionLine {
+    height: 1px;
+    border: 0;
+    background-color:#EEEEEE;
+    width: 1287px;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 429px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.logoutBtn{
+    color: white;
+    border-style: solid;
+    border-color: #256634;
+    border-radius: 10px;
+    background-color: #256634;
+    padding: 5px 5px;
+    margin-left: 365px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.loginSection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    grid-template-rows: repeat(3, minmax(max-content, 1fr));
+}
+
+.inputId {
+    margin-bottom: 8px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.inputPw {
+    margin-bottom: 8px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-bottom: 8px;    
+    font-size: 18px;
+    padding: 10px;
+    background-color: #256634;
+    color: white;
+    font-weight: bold;
+}
+
+.login_rel {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#signUp {
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+#findIdPw {
+    text-decoration-line: none;
+    text-decoration: none;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.footerLogoImg {
+    grid-column: 1 / 2;
+    margin-left: 120px;
+}
+
+.footerCopyRightText {
+    grid-column: 2 / 3;
+    text-align: center;
+    padding-left: 10px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #909090;
+}
