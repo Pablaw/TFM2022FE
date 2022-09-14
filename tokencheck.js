@@ -2,6 +2,15 @@
     //1-1. 접근 유효 체크 - HojinToken 체크
     const tokenCheck = localStorage.getItem("HojinToken");
 
+    // function checkPopup () {
+    //     const url = ""
+    //     const name = "chcek id"
+    //     const option = `width = ${window.screen.width}, height= ${window.screen.height}, top = 100, left = 200 location = no`;
+    //     window.open(url, name, option);
+    // }
+
+
+const body = document.querySelector("body");
     //1-2. 접근 유효 체크
     //null / undefiend / 빈값("")
     if(tokenCheck == null || tokenCheck == undefined || tokenCheck == ""){
@@ -9,9 +18,12 @@
         localStorage.clear(); //localStorage 초기화하고
         window.location.href="login.html"; //로그인 페이지로 보내기
     } else if (tokenCheck != null) { 
-        alert("세션검사 ㄱㄱ");
+        // alert("세션검사 ㄱㄱ");
+        checkPopup();
+        // body.style.backgroundImage = "url('/img/loadingImg.gif')";
+
         localStorage.clear(); //보안용
-        authCheck();
+        setTimeout(authCheck, 3000);
     } else {
         alert(`홈페이지에 문제가 발견되었습니다. \n관리자에게 연락하세요`);
         localStorage.clear(); //localStorage 초기화하고
@@ -20,7 +32,10 @@
 
     //세션검사 함수
     function authCheck(){
-        alert("authCheck tokenCheck : " + tokenCheck);
+
+        // alert("authCheck tokenCheck : " + tokenCheck);
+
+        alert("토큰이 확인되었습니다.");
 
         const url = "http://129.154.220.20:8080/api/authcheck";
 

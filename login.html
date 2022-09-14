@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - TFM 2022</title>
     <link rel="stylesheet" href="styleLogin.css">
+    <script defer src="login.js"></script>
     <!-- <script defer src="main.js"></script> -->
 </head>
 
@@ -18,108 +19,46 @@
         </a>
         <div class=""></div>
     </div>
-    <!--<form action="http://localhost:8080/loginCheck" class="form-signin" method="POST">-->
-    <div class="loginSection">
+    <section class="loginContent">
+        <!--<form action="http://localhost:8080/loginCheck" class="form-signin" method="POST">-->
+        <div class="loginSection">
+            <div class=""></div>
+            <input class="inputId" id="tfmid" type="text" placeholder="아이디" />
+            <div class=""></div>
+            <div class=""></div>
+            <input class="inputPw" id="tfmpw" type="password" placeholder="비밀번호" />
+            <div class=""></div>
+            <div class=""></div>
+            <button class="submitBtn" id="loginCheck">로그인</button>
+            <div class=""></div>
+        </div>
+        <!--  </form>-->
         <div class=""></div>
-        <input class="inputId" id="tfmid" type="text" placeholder="아이디" />
-        <div class=""></div>
-        <div class=""></div>
-        <input class="inputPw" id="tfmpw" type="password" placeholder="비밀번호" />
-        <div class=""></div>
-        <div class=""></div>
-        <button class="submitBtn" id="loginCheck">로그인</button>
-        <div class=""></div>
-    </div>
-    <!--  </form>-->
-    <div class=""></div>
-    </div>
-    <div class="login_rel">
-        <a href="signup.html" id="signUp">회원가입</a>
-        <span class="text_bar">|</span>
-        <a href="findIdPw.html" id="findIdPw">아이디/비밀번호 찾기</a>
-    </div>
+        </div>
+        <div class="login_rel">
+            <a href="signup.html" id="signUp">회원가입</a>
+            <span class="text_bar">|</span>
+            <a href="findIdPw.html" id="findIdPw">아이디/비밀번호 찾기</a>
+        </div>
+
     <hr class="divisionLine">
-    <section class="footer">
-        <article class="footerLogo">
-            <input class="ohleekimLogo" type="image" alt="ohleekimLogoImage" src="img/ohleekim.png" />
-        </article>
-        <article class="footerCopyRight">
-            <p class="ohleekimCopyRightText">© 오이김. All Rights Reserved.</p>
-        </article>
-        <article class="footerMargin"></article>
+        <section class="footer">
+            <article class="footerLogo">
+                <input class="ohleekimLogo" type="image" alt="ohleekimLogoImage" src="img/ohleekim.png" />
+            </article>
+            <article class="footerCopyRight">
+                <p class="ohleekimCopyRightText">© 오이김. All Rights Reserved.</p>
+            </article>
+            <article class="footerMargin"></article>
+        </section>
     </section>
+
+    <section class="loginCheck">
+        <div class="loginId"></div>
+        <img class="loadingImg" alt="loading image" src="img/loadingImg.gif">
+        <img class="loginSuccessImg" alt="loginSuccess image" src="img/conanShoot.gif">
+    </section>
+
 </body>
 
 </html>
-<script> //js파일로 만들어야함]]]]]]]
-
-    //호진제작
-    //1-1. 접근 유효 체크 - HojinToken 체크
-    const sessionCheck = localStorage.getItem("HojinToken");
-
-    //1-2. 접근 유효 체크 -만약 빈 껍데기라도 있다면 문제가 있다는 것
-    if (sessionCheck != null) { 
-        alert("비정상적인 접근입니다." + sessionCheck);
-        window.history.go(-1); //이전 페이지로 보내기
-    } 
-
-    //1-3. 접근 유효 체크 - 정상 접근일 경우 정상적으로 아래 코드 사용 가능
-        //로그인 버튼 찾기
-        const loginCheck_button = document.querySelector("#loginCheck");
-
-        //로그인 이벤트 감지
-        loginCheck_button.addEventListener("click", loginCheck);
-
-        //로그인 값 검사 및 체크 요청
-        function loginCheck() {
-
-            const login_info = {
-                id: document.querySelector("#tfmid").value,
-                pw: document.querySelector("#tfmpw").value
-            };
-
-            //console.dir("login_info.id : " + login_info.id
-            //    + "login_info.pw : " + login_info.pw);
-
-            //id & pw null 체크
-            if (login_info.id != "" && login_info.pw != "") {
-
-                const url = "http://129.154.220.20:8080/api/logincheck";
-
-                fetch(url, {
-                    method: "post",
-                    body: JSON.stringify(login_info),
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                }).then((response) => response.json())
-                  .then((data) => {
-
-                        if (data.HojinToken == null) {
-                            alert("로그인 정보에 문제가 발견되었습니다.");
-                            console.log("null 옴" + data.HojinToken);
-                        } else if (data.HojinToken != null) {
-                            //response.ok안해도 되는 이유
-                            //token을 잘 받았다면 정상처리 되었다는 것
-                            console.log("로그인 성공 : " + data.HojinToken);
-                            localStorage.setItem("HojinToken", data.HojinToken);
-                            window.location.href="main.html";
-                        } else {
-                            alert(`로그인 정보에 문제가 있습니다. \n관리자에게 연락하세요`);
-                        } 
-
-                        ////undefined 일때 접근 못하게 추가]]]]]]]]]]]]]]]]]]
-                    })
-            }
-        }
-                //로그인 시간 변수 생성( YYYY-MM-DD HH:MM:SS mysql-type:datetime)
-            // const today = new Date();
-            // const year = String(today.getFullYear()).padStart(4,"0");
-            // const month = String(today.getMonth()+1).padStart(2,"0");
-            // const date = String(today.getDate()).padStart(2,"0");
-            // const hours = String(today.getHours()).padStart(2,"0");
-            // const minutes = String(today.getMinutes()).padStart(2,"0");
-            // const seconds = String(today.getSeconds()).padStart(2,"0");
-            //    const last_login = `${year}-${month}-${date} ${hours}:${minutes}:${seconds}`;
-            //    console.log(last_login);
-</script>

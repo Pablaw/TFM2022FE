@@ -28,7 +28,7 @@ function logoutCheck(){
         .then(response => {
            
             const msg = response.ok;
-            alert("로그아웃 메시지 : " + msg);
+            // alert("로그아웃 메시지 : " + msg);
             window.location.href="login.html";            
         })//end ftech then
     }//end if

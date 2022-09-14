@@ -12,7 +12,7 @@ const logoBtn = document.createElement("img");
     logoBtn.setAttribute("src", `https://raw.githubusercontent.com/Pablaw/RemoteStorag/main/tfm2022/img/primary/tfm2022Logo.png`);
     logoBtn.addEventListener("click", linkMove);
     function linkMove () {
-        location.href = "http://127.0.0.1:5500//login.html"
+        window.location.href = "main.html"
     }
 const headerMarginArticle = document.createElement("article");
     headerMarginArticle.classList.add("headerMargin");
