@@ -35,7 +35,8 @@ const body = document.querySelector("body");
 
         // alert("authCheck tokenCheck : " + tokenCheck);
 
-        alert("토큰이 확인되었습니다.");
+        /* 토큰 확인 */
+        // alert("토큰이 확인되었습니다.");
 
         const url = "http://129.154.220.20:8080/api/authcheck";
 
@@ -56,7 +57,8 @@ const body = document.querySelector("body");
                     localStorage.clear(); //localStorage 초기화하고
                     window.location.href="login.html"; //로그인 페이지로 보내기
                 } else if (data.hojinToken != null) { 
-                    alert("토큰검사 완료 왔다 : " + data.hojinToken);
+                            /* 토큰검사 완료 */
+                    // alert("토큰검사 완료 왔다 : " + data.hojinToken);
                     localStorage.setItem("HojinToken", data.hojinToken);
                 } else {
                     alert(`홈페이지에 문제가 발견되었습니다. \n관리자에게 연락하세요`);
