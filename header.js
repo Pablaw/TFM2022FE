@@ -56,7 +56,6 @@ const logoutBtn = document.createElement("div");
 
 
     function selDayNightMode (e) {
-        console.log(selModeBtnName);
         if(modeSelBtn.style.marginLeft === "") {
             modeSelBtn.style.marginLeft = "55%";
             selModeBtnName.innerHTML = "야간모드";

@@ -1,4 +1,4 @@
-  //호진제작////////////////////////////////////////////////////////////
+     /* 호진제작 */
     //1-1. 접근 유효 체크 - HojinToken 체크
     const tokenCheck = localStorage.getItem("HojinToken");
 
