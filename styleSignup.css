@@ -1,5 +1,5 @@
 body {
-    background-color:bisque;
+    background-color: white;
 }
 
 .border {
@@ -38,7 +38,7 @@ body {
 
 
 .logoutBtn{
-    color: bisque;
+    color: white;
     border-style: solid;
     border-color: #256634;
     border-radius: 10px;
@@ -89,7 +89,7 @@ body {
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    background-color: bisque;
+    background-color: white;
     border-color: #256634;
 }
 
