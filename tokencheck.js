@@ -1,6 +1,8 @@
      /* 호진제작 */
     //1-1. 접근 유효 체크 - HojinToken 체크
+    /*
     const tokenCheck = localStorage.getItem("HojinToken");
+    */
 
     // function checkPopup () {
     //     const url = ""
@@ -10,17 +12,19 @@
     // }
 
 
-const body = document.querySelector("body");
+
+
     //1-2. 접근 유효 체크
     //null / undefiend / 빈값("")
-    if(tokenCheck == null || tokenCheck == undefined || tokenCheck == ""){
+    /* if(tokenCheck == null || tokenCheck == undefined || tokenCheck == ""){
         alert("비정상적인 접근입니다.");
         localStorage.clear(); //localStorage 초기화하고
         window.location.href="login.html"; //로그인 페이지로 보내기
-    } else if (tokenCheck != null) { 
+    } else  */
+    if (tokenCheck != null) { 
         // alert("세션검사 ㄱㄱ");
 
-        // body.style.backgroundImage = "url('/img/loadingImg.gif')";
+
 
         localStorage.clear(); //보안용
         setTimeout(authCheck, 3000);

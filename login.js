@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+
 const loadingImg = document.querySelector(".loadingImg");
 const loginContent = document.querySelector(".loginContent");
 const loginId = document.querySelector(".loginId");
@@ -28,19 +28,19 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
 //3000, 2350
 
         function delayCheck () {
-        setTimeout(successCheck, 3000);
+        setTimeout(loginCheck, 3000);
         loginContent.style.display = "none";
         loadingImg.style.display = "flex";
         loginId.innerHTML = "로그인 토큰 검사중";
         loginId.style.display = "flex";
         }
 
-        function successCheck () {
-            setTimeout(loginCheck, 2350);
-            loginId.innerHTML = "로그인 성공!";
-            loginSuccessImg.style.display = "flex";
-            loadingImg.style.display = "none";
-        }
+        // function successCheck () {
+        //     setTimeout(loginCheck, 2350);
+        //     loginId.innerHTML = "로그인 성공!";
+        //     loginSuccessImg.style.display = "flex";
+        //     loadingImg.style.display = "none";
+        // }
 
         //로그인 값 검사 및 체크 요청
         function loginCheck() {
@@ -58,6 +58,7 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
 
             //id & pw null 체크
             if (login_info.id != "" && login_info.pw != "") {
+
 
                 const url = "http://129.154.220.20:8080/api/logincheck";
 
@@ -78,12 +79,33 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
                             //token을 잘 받았다면 정상처리 되었다는 것
                             console.log("로그인 성공 : " + data.HojinToken);
                             localStorage.setItem("HojinToken", data.HojinToken);
-                            window.location.href="main.html";
+
                         } else {
                             alert(`로그인 정보에 문제가 있습니다. \n관리자에게 연락하세요`);
                         } 
 
                         ////undefined 일때 접근 못하게 추가]]]]]]]]]]]]]]]]]]
+                    })
+                    .then( () => {
+                        const tokenCheck = localStorage.getItem("HojinToken");
+                        
+                        if(tokenCheck == null || tokenCheck == undefined || tokenCheck == ""){
+                            alert("비정상적인 접근입니다.");
+                            localStorage.clear(); //localStorage 초기화하고
+                            window.location.href="login.html"; //로그인 페이지로 보내기
+                        }
+
+                        loginId.innerHTML = "로그인 성공!";
+                        loginSuccessImg.style.display = "flex";
+                        loadingImg.style.display = "none";
+                       
+                    })
+                    .then( () => {
+                        setTimeout(delayLoad, 3000);
+                        function delayLoad () {
+                            window.location.href="main.html";
+                        }
+                       
                     })
             }
         }

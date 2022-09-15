@@ -1,5 +1,4 @@
 
-
 const teamNameList_ul = document.querySelector(".teamNameList_ul");
 const hiddenContent = document.querySelector(".hiddenContent");
 const teamNameSubmit_form = document.querySelector(".teamNameSubmit_form");
