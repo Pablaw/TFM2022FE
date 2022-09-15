@@ -19,7 +19,7 @@ const body = document.querySelector("body");
         window.location.href="login.html"; //로그인 페이지로 보내기
     } else if (tokenCheck != null) { 
         // alert("세션검사 ㄱㄱ");
-        checkPopup();
+
         // body.style.backgroundImage = "url('/img/loadingImg.gif')";
 
         localStorage.clear(); //보안용
