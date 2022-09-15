@@ -13,7 +13,7 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
     const sessionCheck = localStorage.getItem("HojinToken");
 
     //1-2. 접근 유효 체크 -만약 빈 껍데기라도 있다면 문제가 있다는 것
-    if (sessionCheck !== null) { 
+    if (sessionCheck != null) { 
         alert("비정상적인 접근입니다." + sessionCheck);
         window.history.go(-1); //이전 페이지로 보내기
     } 
