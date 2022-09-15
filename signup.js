@@ -16,15 +16,29 @@ const validCheckTxt = document.querySelector("#validCheckPw");
 const inputPw = document.querySelector("#inputPw");
 const inputPwCheck = document.querySelector("#inputPwCheck");
 
+const uname = document.querySelector("#uname");
+const gisu = document.querySelector("#gisu");
+
+
+const tfmImg = document.querySelector(".tfmImg");
+
+tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
+
+
 function loginFn (e) {
     console.log(e);
     // db서버로 제출
 }
 
+
+console.log(uname);
+
+
+
 function vaildCheckFnPwCheck () {
     if (inputPw.value === inputPwCheck.value) {
         validCheckTxt.innerHTML = "일치";
-        validCheckTxt.style.color = "blue";
+        validCheckTxt.style.color = "black";
     } else {
         validCheckTxt.innerHTML = "불일치";
         validCheckTxt.style.color = "red";

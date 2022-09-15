@@ -4,6 +4,10 @@ const loginContent = document.querySelector(".loginContent");
 const loginId = document.querySelector(".loginId");
 const loginSuccessImg = document.querySelector(".loginSuccessImg");
 
+const tfmImg = document.querySelector(".tfmImg");
+
+tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
+
 //호진제작
     //1-1. 접근 유효 체크 - HojinToken 체크
     const sessionCheck = localStorage.getItem("HojinToken");
@@ -20,7 +24,7 @@ const loginSuccessImg = document.querySelector(".loginSuccessImg");
 
         //로그인 이벤트 감지
         loginCheck_button.addEventListener("click", delayCheck);
-
+//3000, 2350
 
         function delayCheck () {
         setTimeout(successCheck, 3000);

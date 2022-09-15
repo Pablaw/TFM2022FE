@@ -9,13 +9,11 @@
     <script defer src="signup.js"></script>
   </head>
   <body>
+
     <div class="header">
-      <div class=""></div>
-      <a href="login.html">
-        <img class="tfmImg" src="./img/tfm2022.png" />
-      </a>
-      <div class=""></div>
+      <img class="tfmImg" src= "https://raw.githubusercontent.com/Pablaw/RemoteStorag/main/tfm2022/img/primary/tfm2022Logo.png" />
     </div>
+
     <div class="border">
       <div class="content">
         <label class="inputLabel" for="inputId">아이디</label>
@@ -36,15 +34,20 @@
           placeholder="30자 이내"
         />
         <div class=""></div>
-        <label class="inputLabel" for="inputPwCheck">비밀번호 확인</label>
-        <input
-          class="inputTxt"
-          id="inputPwCheck"
-          type="password"
-          maxlength="30"
-          placeholder="30자 이내"
-        />
-        <div id="validCheckPw">일치확인</div>
+        <!-- <section class="pwValidCheck"> -->
+          <label class="inputLabel" for="inputPwCheck">비밀번호 확인</label>
+          <input
+            class="inputTxt"
+            id="inputPwCheck"
+            type="password"
+            maxlength="30"
+            placeholder="30자 이내"
+          />
+          <div></div>
+          <div></div>
+          <div id="validCheckPw"></div>
+        <!-- </section> -->
+        <div></div>
         <label class="inputLabel" for="nick">닉네임</label>
         <input
           class="inputTxt"
@@ -52,16 +55,20 @@
           type="text"
           maxlength="10"
           placeholder="10자 이내"
+          oninput="this.value = this.value.replace(/[<>()]/g, '').replace(/(\..*)\./g, '$1')"
         />
         <div class="inputTxt" =""></div>
         <label class="inputLabel" for="uname">이름</label>
-        <input class="inputTxt" id="uname" type="text" placeholder="" />
+        <input class="inputTxt" id="uname" type="text" placeholder="한글 4자 이내" maxlength="3"  
+        oninput="this.value = this.value.replace(/[^ㄱ-힣.]/g,'').replace(/(\..*)\./g, '$1')" />
         <div class="inputTxt" =""></div>
         <label class="inputLabel" for="tamid">인재번호</label>
-        <input class="inputTxt" id="tamid" type="number" placeholder="" />
+        <input class="inputTxt" id="tamid" type="text" minlength="8" maxlength="8"
+        oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');" />
         <div class="inputTxt" =""></div>
         <label class="inputLabel" for="gisu">기수</label>
-        <input class="inputTxt" id="gisu" type="number" placeholder="" />
+        <input class="inputTxt" id="gisu" type="text" maxlength="1" 
+        oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');" />
         <div class="inputTxt" =""></div>
         <label class="inputLabel" for="mail">이메일</label>
         <input class="inputTxt" id="mail" type="text" placeholder="" />

@@ -108,7 +108,7 @@ fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
     .then((response) => {return response.json()})
     .then((data) => {
 
-            console.log(Object.values(data[2])[7]);
+        //  console.log(Object.values(data[2])); 선수정보
 
         function getDetailTemaInfo () {
             const value = Object.values(Object.values(data[0])[8]);
@@ -385,7 +385,7 @@ fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
 
             const targetStr = Object.values(data[0])[8].logo;
 
-            console.log(targetStr.substr(13, 2));
+            // console.log(targetStr.substr(13, 2)); 리그구분
             if(targetStr[13] === "e") {
                 teamLogo.classList.add("teamLogo", "teamLogoEPL");
                 teamLogo.setAttribute("src", "https://raw.githubusercontent.com/Pablaw/RemoteStorag/main/tfm2022/img/primary/eplLogo.png");
