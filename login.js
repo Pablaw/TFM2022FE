@@ -70,7 +70,7 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
                 }).then((response) => response.json())
                   .then((data) => {
                     console.log(data);
-                        if (data.HojinToken == null) {
+                        if (data.HojinToken == null || data == null) {
                             alert("로그인 정보에 문제가 발견되었습니다.");
                             console.log("null 옴" + data.HojinToken);
                         } else if (data.HojinToken != null) {
