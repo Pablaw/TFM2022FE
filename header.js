@@ -81,7 +81,7 @@ const logoutBtn = document.createElement("div");
 
 
         localStorage.clear(); //보안용
-        authCheck ();
+        setTimeout(authCheck, 700);
     } else {
         alert(`홈페이지에 문제가 발견되었습니다. \n관리자에게 연락하세요`);
         localStorage.clear(); //localStorage 초기화하고
