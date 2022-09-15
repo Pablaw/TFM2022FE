@@ -14,7 +14,8 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
 
     //1-2. 접근 유효 체크 -만약 빈 껍데기라도 있다면 문제가 있다는 것
     if (sessionCheck != null) { 
-        alert("비정상적인 접근입니다." + sessionCheck);
+        alert("허용되지 않은 동작입니다." + sessionCheck);
+        localStorage.clear();
         window.history.go(-1); //이전 페이지로 보내기
     } 
 
