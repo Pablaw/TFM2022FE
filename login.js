@@ -22,9 +22,17 @@ tfmImg.addEventListener("click", () => { window.location.href = "login.html"});
     //1-3. 접근 유효 체크 - 정상 접근일 경우 정상적으로 아래 코드 사용 가능
         //로그인 버튼 찾기
         const loginCheck_button = document.querySelector("#loginCheck");
+        const inputPw = document.querySelector(".inputPw");
 
         //로그인 이벤트 감지
         loginCheck_button.addEventListener("click", delayCheck);
+        inputPw.addEventListener("keyup", enterSubmit);
+
+        function enterSubmit (e) {
+            if (e.keyCode === 13) {
+                delayCheck();
+            }
+        }
 //3000, 2350
 
         function delayCheck () {

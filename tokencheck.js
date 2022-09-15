@@ -21,13 +21,15 @@
         localStorage.clear(); //localStorage 초기화하고
         window.location.href="login.html"; //로그인 페이지로 보내기
     } else  */
+
+    const tokenCheck = localStorage.getItem("HojinToken");
     if (tokenCheck != null) { 
         // alert("세션검사 ㄱㄱ");
 
 
 
         localStorage.clear(); //보안용
-        setTimeout(authCheck, 3000);
+        authCheck ();
     } else {
         alert(`홈페이지에 문제가 발견되었습니다. \n관리자에게 연락하세요`);
         localStorage.clear(); //localStorage 초기화하고
