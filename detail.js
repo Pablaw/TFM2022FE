@@ -302,7 +302,7 @@ fetch("http://129.154.220.20:8080/api/teamlist", {method: "GET"})
                         playerStat.removeChild(playerStat.lastElementChild);
                     }
                 }
-                console.log(playerFeature.innerHTML === "");
+                // console.log(playerFeature.innerHTML === "");
                 const SELETED_PLAYER = e.target;
  
                 /* teamInfoBottom_playerFeatureArticle */
